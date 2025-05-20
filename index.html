@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google fotos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+     <div class="pixel-frame">
+    <div class="notch"></div>
+    <div class="power-button"></div>
+    <div class="screen">
+      <header>
+        <h1 style="font-size: 1.2rem; margin: 0;">Fotos</h1>
+        <label class="upload-btn">
+          Adicionar Fotos
+          <input type="file" accept="image/*" multiple onchange="handleUpload(event)" />
+        </label>
+      </header>
+      <div id="gallery"></div>
+    </div>
+  </div>
+</body>
+</html>
