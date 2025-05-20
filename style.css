@@ -1,0 +1,121 @@
+  html, body {
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .pixel-frame {
+      width: 360px;
+      height: 720px;
+      background: #000;
+      border-radius: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      border: 10px solid #111;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .notch {
+      width: 100%;
+      height: 30px;
+      background: #000;
+      z-index: 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 10px;
+      gap: 8px;
+      color: white;
+      font-size: 0.75rem;
+      box-sizing: border-box;
+    }
+
+    .notch .material-icons {
+      font-size: 18px;
+    }
+
+    .power-button {
+      position: absolute;
+      right: -10px;
+      top: 200px;
+      width: 5px;
+      height: 50px;
+      background: #555;
+      border-radius: 2px;
+      z-index: 4;
+    }
+
+    .screen {
+      flex: 1;
+      background: #f8f9fa;
+      overflow-y: auto;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .upload-btn {
+      background-color: #1a73e8;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 10px;
+      padding: 1rem;
+    }
+
+    .photo {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.03);
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    @media (max-width: 400px) {
+      .pixel-frame {
+        transform: scale(0.9);
+      }
+    }
+
+    @media (max-width: 300px) {
+      .pixel-frame {
+        transform: scale(0.8);
+      }
+    }
