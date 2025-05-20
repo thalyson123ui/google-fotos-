@@ -9,24 +9,25 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-        <header>
-        <h1>Meu Google Fotos Clone</h1>
-    </header>
-
-    <main>
-        <div class="photo-grid" id="photoGrid">
-            <!-- As fotos serão inseridas aqui pelo JavaScript -->
+     <div class="pixel-frame">
+        <div class="notch">
+            <span class="material-icons">network_cell</span>
+            <span class="material-icons">wifi</span>
+            <span class="material-icons">battery_full</span>
+            <span style="margin-left:auto; font-size: 0.75rem;">12:45</span>
+            <span style="font-size: 0.75rem;">100%</span>
         </div>
-    </main>
-
-    <!-- Modal para visualização da imagem -->
-    <div id="imageModal" class="modal">
-        <span class="close-button" id="closeModal">×</span>
-        <img class="modal-content" id="modalImage">
-        <div id="modalCaption" class="caption"></div>
+        <div class="power-button"></div>
+        <div class="screen">
+            <header>
+                <h1 style="font-size: 1.2rem; margin: 0;">Fotos</h1>
+                <label class="upload-btn" for="upload-input">
+                    Adicionar Fotos
+                </label>
+                <input id="upload-input" type="file" accept="image/*" multiple onchange="handleUpload(event)" style="display:none;">
+            </header>
+            <div id="gallery"></div>
+        </div>
     </div>
-
-    <script src="script.js"></script>
-
 </body>
 </html>
